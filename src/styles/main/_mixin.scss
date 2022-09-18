@@ -1,0 +1,35 @@
+@import './variables';
+
+@mixin containerLg-800 () {
+    max-width: $containerLg-800;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid red;
+}
+
+@mixin containerMd-720 () {
+    max-width: $containerMd-720;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid red;
+}
+
+@mixin containerSm-576 () {
+    max-width: $containerSm-576;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 1px solid red;
+}
+
+@mixin flex ($direction, $justify-content, $align-items, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+}
+
+@mixin widthHeight ($widht, $height) {
+    width: $widht;
+    height: $height;
+}

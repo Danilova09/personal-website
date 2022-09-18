@@ -1,0 +1,40 @@
+@import './variables';
+
+.title-primary {
+    font-family: 'Cal Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: $darkGrey;
+}
+
+.title-secondary {
+    font-family: 'Cal Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 1px;
+    color: #2D3748;
+}
+
+.title-tertiary {
+    font-family: 'Cal Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.8px;
+    color: #2D3748;
+}
+
+.description {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: $descriptionLightGrey;
+}
