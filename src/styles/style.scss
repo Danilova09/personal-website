@@ -1,5 +1,10 @@
+// Main
 @import './main/fonts';
 @import './main/main';
 @import './main/mixin';
 @import './main/normalize';
 @import './main/variables';
+// Components
+@import './components/logo';
+@import './components/header';
+@import './components/main';

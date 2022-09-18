@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/style.scss">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
     <title>Document</title>
   </head>
+
   <body>
     <div id="app">
-      <h1 class="title-primary">Main title</h1>
-      <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, veritatis.</p>
+      <!-- Header start -->
+      <header class="header containerLg">
+        <a href="#" class="logo">
+          Lazar.
+        </a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item">
+              <a href="#" class="header__link">talks</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">bookmarks</a>
+            </li>
+            <li class="header__item">
+              <a href="#" class="header__link">gear</a>
+            </li>
+            <li class="header__item moon-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.1155 6.84201C10.6861 6.94935 10.2567 7.00302 9.82738 7.00302C7.14385 7.00302 4.99702 4.85619 4.99702 2.17266C4.99702 1.74329 5.05069 1.31393 5.15803 0.884563C5.2117 0.723551 5.15803 0.508868 4.99702 0.347856C4.83601 0.186844 4.67499 0.133173 4.46031 0.186844C1.93779 0.938234 0.166656 3.29974 0.166656 5.92961C0.166656 9.20352 2.79652 11.8334 6.07043 11.8334C8.7003 11.8334 11.0618 10.0623 11.7595 7.48606C11.8132 7.32505 11.7595 7.11036 11.5985 6.94935C11.4912 6.84201 11.2765 6.78834 11.1155 6.84201Z"
+                  fill="#2D3748" />
+              </svg>
+            </li>
+          </ul>
+        </nav>
+        <div class="burger"></div>
+      </header>
+      <!-- Header end -->
+      <!-- Main block start -->
+      <div class="main-block">
+        <div class="containerLg">
+          <div class="main-block_inner">
+            <div class="main-block__item">
+              <div class="main-block__title_wrapper">
+                <h1 class="main-block__title title-primary">Hi, I’m Lazar Nikolov.</h1>
+                <img src="./src/assets/images/svg/Play Pause Button.svg" alt="">
+              </div>
+              <p class="main-block__description description">I’m a full-stack engineer, a designer, and a content
+                creator. I work at <a class="arrow-link">CodeChem</a> as a <span class="bold">developer/designer</span>
+                , and I’m a <span class="bold">core member</span> at <a href="#" class="arrow-link">Chakra UI</a>,
+                contributing as a <span class="bold">Developer Advocate.</span> I’m also an <a href="#"
+                  class="arrow-link">egghead.io</a> <span class="bold">instructor.</span></p>
+              <div class="main-block__links">
+                <a href="#" class="main-block__link social-link blue">Twitter</a>
+                <a href="#" class="main-block__link social-link">GitHub</a>
+                <a href="#" class="main-block__link social-link purple">Fill x Hug</a>
+              </div>
+            </div>
+            <div class="main-block__item">
+              <div class="main-block__img_wrapper">
+                <img class="main-block__img" src="./src/assets/images/png/Picturemain-photo.png" class="main-block__img"
+                  alt="main-block-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main block end -->
+
     </div>
   </body>
+
 </html>

@@ -1,0 +1,70 @@
+@import './../main/variables';
+@import './../main/mixin';
+
+.header {
+    @include containerLg-800();
+    @include flex(_, space-between, center, _);
+    padding: 18px 15px;
+
+    &__nav {
+        @include media-720() {
+            display: none;
+        }
+    }
+
+    &__list {
+        @include flex(_, center, center, 33px);
+    }
+
+    &__link {
+        font-weight: 600;
+        color: $darkGrey;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        font-family: 'Inter';
+        transition: 200ms;
+
+        &:hover {
+            color: $purple;
+        }
+    }
+
+    .moon-icon:hover {
+        cursor: pointer;
+        filter: invert(38%) sepia(85%) saturate(1799%) hue-rotate(234deg) brightness(87%) contrast(90%);
+    }
+}
+
+.burger {
+    display: none;
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    &::before {
+        content: '';
+        position: absolute;
+        background: $darkGrey;
+        top: 5px;
+        right: 0;
+        height: 1px;
+        width: 20px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: $darkGrey;
+        top: 12px;
+        right: 0;
+        height: 1px;
+        width: 20px;
+    }
+    @include media-720() {
+        display: block;
+    }
+}
+

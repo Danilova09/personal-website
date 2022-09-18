@@ -21,6 +21,18 @@
     border: 1px solid red;
 }
 
+@mixin media-720() {
+    @media all and (max-width: $containerMd-720) {
+        @content;
+    }
+}
+
+@mixin media-576() {
+    @media all and (max-width: $containerSm-576) {
+        @content;
+    }
+}
+
 @mixin flex ($direction, $justify-content, $align-items, $gap) {
     display: flex;
     flex-direction: $direction;

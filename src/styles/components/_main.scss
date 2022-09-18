@@ -1,0 +1,133 @@
+@import './../main/variables';
+@import './../main/mixin';
+
+.main-block {
+    @include containerLg-800();
+
+    &_inner {
+        @include flex(_, space-between, flex-start, 20px);
+        padding: 66px 0 64px 0;
+
+        @include media-720() {
+            @include flex(column, center, center, _);
+        }
+    }
+
+    &__item {
+        @include media-720() {
+            width: 100%;
+            @include flex(column, center, center, 10px);
+        }
+    }
+
+    &__description {
+        color: $darkGrey;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+
+        @include media-720() {
+            text-align: center;
+        }
+
+        @include media-576() {
+            font-size: 14px;
+        }
+    }
+
+
+    &__title {
+        &_wrapper {
+            @include flex(_, flex-start, center, 14px);
+
+        }
+
+        @include media-576() {
+            font-size: 22px;
+        }
+    }
+
+    &__description {
+        margin-top: 12px;
+        max-width: 495px;
+    }
+
+    &__img {
+        width: 100%;
+
+        &_wrapper {
+            max-width: 224px;
+            height: auto;
+        }
+    }
+
+    &__links {
+        @include flex(_, flex-start, flex-start, 40px);
+        margin-top: 18px;
+        @include media-576() {
+            @include flex(_, flex-start, flex-start, 10px);
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        line-height: 15px;
+        height: 32px;
+        padding: 0 25px 0 8px;
+        line-height: 30px;
+        border-radius: 8px;
+        transition: 300ms;
+
+        &:hover {
+            background: rgb(234, 234, 234);
+        }
+    }
+
+}
+
+.arrow-link {
+    position: relative;
+    padding-right: 20px;
+    color: $purple;
+    font-family: 'Inter';
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: url('/src/assets/images/svg/arrow-dark.svg') right center no-repeat;
+        top: 5px;
+        right: 5px;
+    }
+
+    @include media-576() {
+        font-size: 14px;
+    }
+}
+
+.social-link {
+    position: relative;
+    padding-right: 20px;
+    font-family: 'Inter';
+    font-weight: 600;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: url('/src/assets/images/svg/arrow-dark.svg') right center no-repeat;
+        top: 10px;
+        right: 5px;
+    }
+}
+
+.bold {
+    font-weight: 700;
+    @include media-576() {
+        font-size: 14px;
+    }
+}
