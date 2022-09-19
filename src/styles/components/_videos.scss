@@ -1,0 +1,76 @@
+@import './../main/variables';
+@import './../main/mixin';
+
+
+.videos-block {
+    &__title {
+        margin-bottom: 32px;
+    }
+
+    &__line {
+        height: 1px;
+        width: 100%;
+        background-color: #EDF2F7;
+        margin-top: 64px;
+    }
+}
+
+.cards {
+    @include flex(_, space-around, center, _);
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 50%;
+    margin-bottom: 10px;
+
+    &_inner {
+        padding: 0 10px 25px 10px;
+    }
+
+    &__img {
+        width: 100%;
+
+        &_wrapper {
+            max-width: 360px;
+        }
+    }
+
+    &__title {
+        margin-top: 16px;
+    }
+
+    &__description {
+        margin-top: 8px;
+    }
+}
+
+@media all and (max-width: $containerMd-720) {
+    .videos-block {
+        &__title {
+            text-align: center;
+        }
+    }
+
+    .cards {
+        @include flex(column, space-around, center, _);
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 70%;
+        &__img {
+            width: 100%;
+
+            &_wrapper {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: $containerSm-576) {
+    .card {
+        width: 100%;
+    }
+}
