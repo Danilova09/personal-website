@@ -1,0 +1,60 @@
+@import './../main/variables';
+@import './../main/mixin';
+
+.containerLg {
+    @include containerLg-800 ();
+}
+
+.courses-block {
+    &_inner {
+        @include flex(column, center, center, 20px);
+        margin-top: 16px;
+    }
+
+    &__item {
+        @include flex(_, center, center, 20px);
+        padding: 17px;
+        background: $cardBackgroundColor;
+        border-radius: 6px;
+    }
+
+    &__date,
+    &__description {
+        font-size: 14px;
+        font-family: 'Inter', sans-serif;
+        margin-top: 13px;
+        line-height: 21px;
+    }
+
+    &__date {
+        color: $descriptionLightGrey;
+    }
+
+    &__description {
+        color: $darkGrey;
+    }
+
+    &__title-wrapper {
+        @include flex(_, space-between, center, _);
+    }
+
+    &__link {
+        color: $purple;
+        font-size: 14px;
+        font-family: 'Inter';
+    }
+}
+
+@media all and (max-width: $containerMd-720) {
+    .courses-block {
+        text-align: center;
+
+        &__item {
+            @include flex(column, center, center, 20px);
+        }
+
+        &__title-wrapper {
+            @include flex(column, center, center, 10px);
+        }
+    }
+}

@@ -1,10 +1,16 @@
 @import './../main/variables';
 @import './../main/mixin';
 
-.header {
+
+.containerLg {
     @include containerLg-800();
-    @include flex(_, space-between, center, _);
-    padding: 18px 15px;
+}
+
+.header {
+    &_inner {
+        @include flex(_, space-between, center, _);
+        padding: 18px 0px;
+    }
 
     &__nav {
         @include media-720() {

@@ -1,0 +1,45 @@
+@import './../main/variables';
+@import './../main/main';
+@import './../main/mixin';
+
+
+.posts-block {
+    padding: 64px 15px;
+}
+
+.posts {
+    @include flex(column, center, center, _);
+}
+
+.post {
+    padding-top: 25px;
+
+    &__title {
+
+        &_wrapper {
+            @include flex(_, space-between, center, _);
+        }
+    }
+
+    &__description {
+        margin-top: 13px;
+    }
+}
+
+@media all and (max-width: $containerMd-720) {
+    .posts-block {
+        text-align: center;
+    }
+
+    .posts {
+        @include flex(column, center, center, 10px);
+    }
+
+    .post {
+        &__title {
+            &_wrapper {
+                @include flex(column, center, center, 5px);
+            }
+        }
+    }
+}
