@@ -4,8 +4,14 @@
 .footer {
     padding: 32px 0 41px 0;
 
+    &__line {
+        width: 100%;
+        border: 1px solid #EDF2F7;
+    }
+
     &__lists {
         @include flex(_, space-between, center, _);
+        margin-top: 34px;
     }
 
     &__list-item {

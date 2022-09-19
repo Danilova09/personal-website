@@ -1,0 +1,56 @@
+@import './../main/variables';
+@import './../main/mixin';
+
+.link {
+    text-decoration: underline;
+}
+
+.uses-block {
+    padding: 64px 0; 
+
+    &__description {
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 175%;
+        color: #2D3748;
+        margin-top: 12px;
+        margin-bottom: 64px;
+
+    }
+}
+
+.software-block {
+
+    &__title {
+        margin: 66px 0 54px 0;
+    }
+}
+
+.app-items {
+    @include flex(column, _, _, 42px);
+}
+
+.app-item {
+    width: 100%;
+    @include flex(_, flex-start, center, 30px);
+}
+
+@media all and (max-width: $containerMd-720) {
+    .uses-block {
+        &__title {
+            text-align: center;
+        }
+    
+        &__description {
+            text-align: center;
+    
+        }
+    }
+
+    .software-block {
+        &__title {
+            text-align: center;
+        }
+    }
+}
